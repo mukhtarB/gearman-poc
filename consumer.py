@@ -1,6 +1,6 @@
 """
 Consumer / Worker for gearman service
-Sends out jobs to the workers for processing
+Recieves and Processes jobs.
 """
 import python3_gearman as worker
 import json
