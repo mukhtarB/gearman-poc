@@ -27,7 +27,7 @@ def demo_job():
 
 gm_client = gearman.GearmanClient(['localhost:4730'])  # init gearman client
 
-completed_job_request = gm_client.submit_job("reverse", json.dumps(demo_job()))  # submit job
+completed_job_request = gm_client.submit_job("reverse", json.dumps(demo_job()), background=True)  # submit job
 print("--- Dispatched Job")
 
 check_request_status(completed_job_request)  # check status
